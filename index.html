@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Rasha Nourin 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://media.tenor.com/9Fz7ZnYGHj0AAAAC/love.gif') center center fixed;
+            background-size: cover;
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .message-box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 700px;
+            box-shadow: 0 0 20px #ff69b4;
+            animation: pulse 2s infinite;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            text-shadow: 0 0 5px #ffffffa0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-shadow: 0 0 10px #87ceeb;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px #fff;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        iframe {
+            display: none;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .heart {
+            position: fixed;
+            top: -10px;
+            color: #ff69b4;
+            animation: fall linear infinite;
+            z-index: 0;
+            opacity: 0.8;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #fff;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <img src="https://i.imgur.com/0Z8Fzod.jpg" alt="Rasha" class="photo">
+        <h1>Hey Rasha Nourin,</h1>
+        <p>
+            I just wanted to remind you how much you mean to me.<br>
+            You’re not just someone I care about — you’re someone who makes my world feel lighter, warmer, and so much brighter.<br>
+            Even when we’re not together in person, you’re always in my heart.<br>
+            You make me smile, you inspire me, and I’m grateful for every little moment with you.<br><br>
+            This little page is just my way of saying...<br>
+            I’m thinking about you. I care about you. And I really, really like you. 😁🫶🏻
+        </p>
+        <div class="footer">
+            Forever your Muhammed Mishal
+        </div>
+    </div>
+
+    <!-- Background music -->
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/98zHKN-xSHk?autoplay=1&loop=1&playlist=98zHKN-xSHk" allow="autoplay"></iframe>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💖";
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            const size = Math.random() * 20 + 10;
+            heart.style.fontSize = size + "px";
+
+            const rotation = Math.random() * 360;
+            heart.style.transform = `rotate(${rotation}deg)`;
+
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
